@@ -1,0 +1,679 @@
+﻿<!DOCTYPE html>
+<html lang="it" class="no-js">
+<head>
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrico Iorio — Full-Stack Developer</title>
+    <link rel="icon" type="image/png" href="fotoprofilo.png">
+    <meta name="description" content="Portfolio di Enrico Iorio, Full-Stack Developer. Siti web moderni, veloci e su misura.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-text">Caricamento...</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient"></div>
+    <div class="bg-gradient-alt"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">DEV</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Competenze">Competenze</a></li>
+                <li><a href="#bio" class="nav-link" data-text="Bio">Bio</a></li>
+                <li><a href="#works" class="nav-link" data-text="Lavori">Lavori</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Progetti">Progetti</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contatti">Contatti</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="#hero" class="mobile-link">Home</a>
+            <a href="#skills" class="mobile-link">Competenze</a>
+            <a href="#bio" class="mobile-link">Bio</a>
+            <a href="#works" class="mobile-link">Lavori</a>
+            <a href="#projects" class="mobile-link">Progetti</a>
+            <a href="#contact" class="mobile-link">Contatti</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        
+        <section id="hero" class="hero">
+            <svg class="hero-deco" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:rgba(122,0,255,0);" />
+                        <stop offset="50%" style="stop-color:rgba(122,0,255,0.3);" />
+                        <stop offset="100%" style="stop-color:rgba(122,0,255,0);" />
+                    </linearGradient>
+                </defs>
+                <line x1="0" y1="100" x2="100" y2="0" stroke="url(#lineGrad)" stroke-width="0.2" />
+                <circle cx="20" cy="80" r="0.5" fill="rgba(122,0,255,0.4)" />
+                <circle cx="80" cy="20" r="0.5" fill="rgba(168,85,247,0.4)" />
+            </svg>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Disponibile per nuovi progetti</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-line">Enrico Iorio</span>
+                    <span class="title-line title-highlight">Full-Stack Developer</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Sviluppo siti web moderni, performanti e su misura.<br>
+                    Specializzato in HTML, CSS, JavaScript e interfacce intuitive.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Vedi i progetti</a>
+                    <a href="#contact" class="btn btn-outline">Contattami</a>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">Anni di esperienza</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Progetti completati</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Clienti soddisfatti</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="section-header">
+                <span class="section-eyebrow">Competenze</span>
+                <h2 class="section-title">Tecnologie</h2>
+                <p class="section-subtitle">Strumenti che uso quotidianamente per sviluppare i miei progetti.</p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3 class="skill-name">HTML5</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                        <p class="skill-desc">Semantica, accessibilita, SEO</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-name">CSS3</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                        <span class="skill-percent">92%</span>
+                        <p class="skill-desc">Flexbox, Grid, animazioni, responsive</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-name">JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                        <p class="skill-desc">ES6+, DOM, async/await</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-name">Java</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                        <p class="skill-desc">Sviluppo plugin Minecraft, backend</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-name">SQL</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 87%"></div>
+                        </div>
+                        <span class="skill-percent">87%</span>
+                        <p class="skill-desc">MySQL, database relazionali</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-name">Python</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                        <span class="skill-percent">82%</span>
+                        <p class="skill-desc">Scripting, automazioni, bot</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bio" class="bio">
+            <div class="bio-container">
+                <div class="bio-visual">
+                    <div class="bio-image-wrapper">
+                        <div class="bio-image-real">
+                            <img src="assets/fotoprofilo.png" alt="Enrico Iorio">
+                        </div>
+                        <div class="corner-bracket corner-bracket-tl"></div>
+                        <div class="corner-bracket corner-bracket-tr"></div>
+                        <div class="corner-bracket corner-bracket-bl"></div>
+                        <div class="corner-bracket corner-bracket-br"></div>
+                    </div>
+                    <div class="bio-experience-badge">
+                        <span class="exp-number">7+</span>
+                        <span class="exp-text">Anni di esperienza</span>
+                    </div>
+                </div>
+
+                <div class="bio-content">
+                    <div class="section-header">
+                        <span class="section-eyebrow">Chi sono</span>
+                        <h2 class="section-title">La mia storia</h2>
+                    </div>
+
+                    <div class="bio-text">
+                        <p class="bio-paragraph">
+                            Sono Enrico Iorio, sviluppatore Full-Stack con sede a Roma. Lavoro nel campo dello sviluppo web dal 2017,
+                            partendo da semplici pagine statiche fino ad arrivare a progetti complessi come server di gioco e applicazioni web.
+                        </p>
+                        <p class="bio-paragraph">
+                            Al di fuori del codice, pratico bodybuilding e kickboxing da anni. Lo sport mi ha insegnato disciplina,
+                            pazienza e perseveranza — qualita che applico quotidianamente anche nel mio lavoro.
+                        </p>
+                        <p class="bio-paragraph">
+                            Lavoro come freelancer perche credo nel rapporto diretto con il cliente. Preferisco fare piu progetti
+                            accessibili economicamente piuttosto che pochi lavori costosi. Il mio obiettivo e costruire
+                            una rete di clienti soddisfatti che si fidano del mio lavoro.
+                        </p>
+                    </div>
+
+                    <div class="bio-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-check">✓</span>
+                            <span>Siti su misura per ogni budget</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-check">✓</span>
+                            <span>Codice pulito e mantenibile</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-check">✓</span>
+                            <span>Supporto anche dopo la consegna</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary">Parliamo del tuo progetto</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="section-header">
+                <span class="section-eyebrow">Esperienza</span>
+                <h2 class="section-title">Progetti e lavori</h2>
+                <p class="section-subtitle">La mia carriera, dal primo esperimento ai progetti attuali.</p>
+            </div>
+
+            <div class="works-container">
+                <div class="works-timeline">
+                    <div class="timeline-line"></div>
+
+                    <div class="work-item">
+                        <div class="work-marker"></div>
+                        <div class="work-card">
+                            <div class="work-period">2026 — Oggi</div>
+                            <h3 class="work-title">Founder — Devora</h3>
+                            <p class="work-company">Azienda</p>
+                            <p class="work-description">
+                                Realizzazione di siti web/piattaforme digitali per persone e attivita interessate a una presenza online moderna, chiara e accessibile.
+                            </p>
+                            <div class="work-tags">
+                                <span class="work-tag">HTML/CSS</span>
+                                <span class="work-tag">JavaScript</span>
+                                <span class="work-tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="work-marker"></div>
+                        <div class="work-card">
+                            <div class="work-period">2026</div>
+                            <h3 class="work-title">Developer — LunarRP</h3>
+                            <p class="work-company">Server FiveM</p>
+                            <p class="work-description">
+                                Sviluppo script in Lua, gestione database e ottimizzazione performance per un server GTA RP.
+                            </p>
+                            <div class="work-tags">
+                                <span class="work-tag">Lua</span>
+                                <span class="work-tag">PHP</span>
+                                <span class="work-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="work-marker"></div>
+                        <div class="work-card">
+                            <div class="work-period">2019 — 2025</div>
+                            <h3 class="work-title">Founder — ImperialCraft</h3>
+                            <p class="work-company">Server Minecraft</p>
+                            <p class="work-description">
+                                Creatore e gestore di un server Minecraft multimodalita'. Plugin custom in Java,
+                                bot Discord, sito web integrato. Chiuso per motivi economici ma esperienza formativa.
+                            </p>
+                            <div class="work-tags">
+                                <span class="work-tag">Java</span>
+                                <span class="work-tag">Python</span>
+                                <span class="work-tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="work-marker"></div>
+                        <div class="work-card">
+                            <div class="work-period">2018 — Oggi</div>
+                            <h3 class="work-title">Web Developer Freelance</h3>
+                            <p class="work-company">Autonomo</p>
+                            <p class="work-description">
+                                Siti web per attivita' commerciali, ristoranti, server di gioco e professionisti.
+                                Dal semplice sito vetrina alle applicazioni piu complesse.
+                            </p>
+                            <div class="work-tags">
+                                <span class="work-tag">HTML/CSS</span>
+                                <span class="work-tag">JavaScript</span>
+                                <span class="work-tag">PHP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="work-marker"></div>
+                        <div class="work-card">
+                            <div class="work-period">2017 — 2018</div>
+                            <h3 class="work-title">Primi passi con Unity</h3>
+                            <p class="work-company">Hobby</p>
+                            <p class="work-description">
+                                Prime esperienze di programmazione con Unity 3D. Ho capito che preferisco lo sviluppo web
+                                alla creazione di videogiochi, ma e' stato utile per imparare C# e la logica di programmazione.
+                            </p>
+                            <div class="work-tags">
+                                <span class="work-tag">C#</span>
+                                <span class="work-tag">Unity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="section-header">
+                <span class="section-eyebrow">Portfolio</span>
+                <h2 class="section-title">Alcuni lavori</h2>
+                <p class="section-subtitle">Una selezione dei progetti a cui ho lavorato negli ultimi anni.</p>
+                <p class="section-subtitle2">Il codice di alcuni di questi progetti è disponibile su GitHub.</p>
+                
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotoprofiloIMCT.jpg" alt="ImperialCraft Minecraft Server">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ImperialCraft</h3>
+                        <p class="project-desc">Server Minecraft multimodalita con community attiva. Top 20 su Minecraft Italia (ottobre 2023).</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/devora.png" alt="Devora">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Devora</h3>
+                        <p class="project-desc">Fondatore di un'azienda che crea siti web/piattaforme digitali per persone e attivita' interessate.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotoprofiloLunarRP.png" alt="LunarRP FiveM">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LunarRP</h3>
+                        <p class="project-desc">Sviluppo script e gestione tecnica per server GTA RP su FiveM.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Lua</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotolunarbot.png" alt="Bot Discord">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Bot Discord</h3>
+                        <p class="project-desc">Bot personalizzati con moderazione automatica, musica e comandi custom per community.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotoCloniX.png" alt="CloniX Social">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CloniX</h3>
+                        <p class="project-desc">Concept di social media per matching basato sugli interessi. Progetto non terminato ma esperienza utile.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotoPC_Monitor.png" alt="PC Monitor App">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PC Monitor</h3>
+                        <p class="project-desc">Applicazione desktop per monitorare temperatura e performance del PC in tempo reale.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotoNews.png" alt="NewsITA - Aggregatore notizie italiane" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NewsITA</h3>
+                        <p class="project-desc">Aggregatore di notizie italiane con filtri personalizzabili, notifiche real-time e interfaccia responsive.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotoMindMirror.png" alt="MindMirror - App di benessere mentale" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MindMirror</h3>
+                        <p class="project-desc">Sito che simula una seduta psicologica, con dashboard per vedere le tue personalita' e tanto alto.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">API</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-real">
+                        <img src="assets/fotoIMCTsito.png" alt="Sito ImperialCraft">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sito ImperialCraft</h3>
+                        <p class="project-desc">Sito web vetrina per il server con sistema di shop integrato e gestione utenti.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="showcase">
+            <div class="showcase-container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Link Siti</span>
+                    <h2 class="section-title">Visita i miei Siti Web</h2>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotoIMCTsito.png" alt="ImperialCraft">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">ImperialCraft</h3>
+                                <a href="https://imperialcraft.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/devora.png" alt="Devora">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">Devora</h3>
+                                <a href="https://devorastudio.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotoprofiloLunarRP.png" alt="LunarRP">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">LunarRP</h3>
+                                <a href="https://lunarrp.com" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotocrack.png" alt="Bot Discord">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">Spot Carlo Cracco</h3>
+                                <a href="https://spot-carlo-cracco.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotoCloniX.png" alt="CloniX">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">CloniX</h3>
+                                <a href="https://clonix.io" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotoducati.ong.png" alt="PC Monitor">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">Spot Ducati</h3>
+                                <a href="https://spot-ducati.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotoNews.png" alt="NewsITA">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">NewsITA</h3>
+                                <a href="https://newsita.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+S
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotoMindMirror.png" alt="MindMirror">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">MindMirror</h3>
+                                <a href="https://mindmirror.app" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <!-- Duplicati per loop infinito -->
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/fotoprofiloIMCT.jpg" alt="ImperialCraft">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">ImperialCraft</h3>
+                                <a href="https://imperialcraft.it" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/devora.png" alt="Devora">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">Devora</h3>
+                                <a href="https://devora.it" target="_blank" rel="noopener noreferrer" class="carousel-btn">Visita →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <div class="section-header">
+                        <span class="section-eyebrow">Contatti</span>
+                        <h2 class="section-title">Lavoriamo insieme</h2>
+                        <p class="section-subtitle">
+                            Hai un progetto in mente? Scrivimi e parliamone.
+                        </p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <a href="mailto:enryyyioriox@outlook.it" class="contact-method">
+                            <div class="contact-icon">@</div>
+                            <div class="contact-info">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">enryyyioriox@outlook.it</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-info">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Roma, Italia</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">🕐</div>
+                            <div class="contact-info">
+                                <span class="contact-label">Disponibilita</span>
+                                <span class="contact-value">Freelance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="mailto:enryyyioriox@outlook.it" class="btn btn-primary btn-large">Scrivimi un'email</a>
+                </div>
+
+                <div class="contact-social">
+                    <span class="social-label">Seguimi</span>
+                    <div class="social-links">
+                        <a href="https://github.com/redmi10enrico-spec" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="social-icon"></a>
+                        <a href="https://www.instagram.com/enryyy_iorio" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.tiktok.com/@enrico0077" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" class="social-icon"></a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">EI</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </div>
+                    <p class="footer-copy">
+                        &copy; 2026 Enrico Iorio — Full-Stack Developer
+                    </p>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

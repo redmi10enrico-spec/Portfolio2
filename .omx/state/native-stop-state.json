@@ -1,0 +1,14 @@
+{
+  "sessions": {
+    "019e9d4a-9857-7333-b56d-15361d9f25b3": {
+      "ordinary_no_progress_guard": {
+        "fingerprint": "ordinary|sistemato. il problema era una regola css nuova che sovrascriveva `position: absolute` dei loghi nella timeline. ora i loghi delle card timeline stanno di nuovo in alto a destra, con padding dedicato su desktop e mobile, e non si sovrappongono piu' a data o titolo. verifica fatta: su viewport mobile il primo logo risulta a `15px` dal bordo destro della card e `overlapsdate/overlapstitle` sono entrambi `false`.",
+        "first_seen_at": "2026-06-06T15:33:31.448Z",
+        "last_seen_at": "2026-06-06T15:33:31.448Z",
+        "repeat_count": 1,
+        "last_turn_id": "019e9d8f-17af-7193-bf86-1d09ce869bf6",
+        "last_thread_id": null
+      }
+    }
+  }
+}

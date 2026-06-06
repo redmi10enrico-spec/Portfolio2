@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enrico Iorio | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio e curriculum di Enrico Iorio, Full-Stack Developer a Roma. Siti web, server, bot, piattaforme e progetti digitali.">
+  <meta name="theme-color" content="#050507">
+  <link rel="icon" type="image/png" href="assets/fotoprofilo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader is-hidden" id="loader" aria-hidden="true">
+    <div class="loader__mark">&lt;EI/&gt;</div>
+    <div class="loader__bar"><span></span></div>
+    <p>Accendo il portfolio</p>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <canvas class="constellation-canvas" id="constellationCanvas" aria-hidden="true"></canvas>
+  <div class="scanline-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Torna alla home">
+      <span class="brand__angle">&lt;</span><span>EI</span><span class="brand__angle">/&gt;</span>
+    </a>
+    <nav class="nav" aria-label="Navigazione principale">
+      <a href="#bio">Bio</a>
+      <a href="#skills">Competenze</a>
+      <a href="#experience">Esperienza</a>
+      <a href="#projects">Progetti</a>
+      <a href="#contact">Contatti</a>
+    </nav>
+    <a class="header-cta" href="mailto:enryyyioriox@outlook.it">Email</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#home">Home</a>
+    <a href="#bio">Bio</a>
+    <a href="#skills">Competenze</a>
+    <a href="#experience">Esperienza</a>
+    <a href="#projects">Progetti</a>
+    <a href="#method">Metodo</a>
+    <a href="#contact">Contatti</a>
+  </div>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero__copy reveal">
+        <p class="eyebrow"><span></span>Disponibile per nuovi progetti freelance</p>
+        <h1>Enrico Iorio</h1>
+        <p class="hero__role">Full-Stack Developer</p>
+        <p class="hero__intro">
+          Creo siti web moderni, piattaforme digitali, bot e strumenti su misura.
+          Porto disciplina, codice pulito e interfacce chiare dentro progetti concreti.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#projects">Vedi i progetti <span>&searr;</span></a>
+          <a class="button button--ghost" href="#contact">Parliamo <span>&rarr;</span></a>
+        </div>
+        <div class="hero__stats" aria-label="Statistiche professionali">
+          <div><strong>7</strong><span>Anni di esperienza</span></div>
+          <div><strong>50</strong><span>Progetti completati</span></div>
+          <div><strong>30</strong><span>Clienti soddisfatti</span></div>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal" data-parallax>
+        <div class="portrait-stage">
+          <div class="portrait-stage__grid"></div>
+          <img src="assets/fotoprofilo.png" alt="Foto profilo di Enrico Iorio" class="portrait">
+          <span class="floating-tag tag-one">HTML</span>
+          <span class="floating-tag tag-two">CSS</span>
+          <span class="floating-tag tag-three">JS</span>
+          <span class="floating-tag tag-four">SQL</span>
+          <div class="orbit orbit--one"></div>
+          <div class="orbit orbit--two"></div>
+        </div>
+        <div class="hero-note">
+          <span>Roma, Italia</span>
+          <strong>Web, server, community, automazioni.</strong>
+        </div>
+      </div>
+
+      <div class="chapter-rail" aria-hidden="true">
+        <span>01</span><span></span><span>portfolio</span>
+      </div>
+    </section>
+
+    <section class="marquee-band" aria-label="Progetti in evidenza">
+      <div class="marquee-track">
+        <span>CreateMe</span><span>Devora</span><span>ImperialCraft</span><span>LunarRP</span><span>CloniX</span><span>NewsITA</span><span>MindMirror</span><span>PC Monitor</span><span>Spot Ducati</span><span>Spot Carlo Cracco</span>
+        <span>CreateMe</span><span>Devora</span><span>ImperialCraft</span><span>LunarRP</span><span>CloniX</span><span>NewsITA</span><span>MindMirror</span><span>PC Monitor</span><span>Spot Ducati</span><span>Spot Carlo Cracco</span>
+      </div>
+    </section>
+
+    <section class="bio section-shell" id="bio">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span>Biografia</p>
+        <h2>Dal primo sito ai progetti completi.</h2>
+      </div>
+      <div class="bio__grid">
+        <div class="bio__image reveal">
+          <img src="assets/fotoprofilo.png" alt="Enrico Iorio">
+          <div class="bio__badge">
+            <strong>2017</strong>
+            <span>inizio percorso web</span>
+          </div>
+        </div>
+        <div class="bio__text reveal">
+          <p>
+            Sono Enrico Iorio, sviluppatore Full-Stack con sede a Roma. Ho iniziato con
+            pagine statiche e sono arrivato a server di gioco, bot, dashboard, siti vetrina,
+            landing commerciali e piattaforme su misura.
+          </p>
+          <p>
+            Lavoro come freelancer perche credo nel rapporto diretto con il cliente:
+            preferisco costruire soluzioni accessibili, chiare e mantenibili, con supporto
+            anche dopo la consegna.
+          </p>
+          <p>
+            Fuori dal codice pratico bodybuilding e kickboxing. Disciplina, pazienza e
+            costanza non sono slogan: sono il modo in cui porto avanti anche i progetti.
+          </p>
+          <div class="bio__checks">
+            <span>&check; Siti su misura per ogni budget</span>
+            <span>&check; Codice pulito e mantenibile</span>
+            <span>&check; Supporto post-consegna</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section-shell" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span>Competenze</p>
+        <h2>Stack pratico, non solo parole.</h2>
+      </div>
+      <div class="skills__layout">
+        <div class="radar reveal" aria-label="Mappa competenze">
+          <div class="radar__ring ring-a"></div>
+          <div class="radar__ring ring-b"></div>
+          <div class="radar__ring ring-c"></div>
+          <span style="--x:74%;--y:22%">HTML</span>
+          <span style="--x:84%;--y:58%">CSS</span>
+          <span style="--x:50%;--y:12%">JS</span>
+          <span style="--x:18%;--y:42%">Java</span>
+          <span style="--x:30%;--y:78%">SQL</span>
+          <span style="--x:66%;--y:82%">Python</span>
+          <strong>Full<br>Stack</strong>
+        </div>
+        <div class="skill-list reveal">
+          <article class="skill-row" style="--level:95%">
+            <div><strong>HTML5</strong><span>Semantica, accessibilita, SEO</span></div><em>95%</em><i></i>
+          </article>
+          <article class="skill-row" style="--level:92%">
+            <div><strong>CSS3</strong><span>Grid, responsive, animazioni</span></div><em>92%</em><i></i>
+          </article>
+          <article class="skill-row" style="--level:90%">
+            <div><strong>JavaScript</strong><span>ES6+, DOM, async, interazioni</span></div><em>90%</em><i></i>
+          </article>
+          <article class="skill-row" style="--level:85%">
+            <div><strong>Java</strong><span>Plugin Minecraft, logica backend</span></div><em>85%</em><i></i>
+          </article>
+          <article class="skill-row" style="--level:87%">
+            <div><strong>SQL</strong><span>MySQL e database relazionali</span></div><em>87%</em><i></i>
+          </article>
+          <article class="skill-row" style="--level:82%">
+            <div><strong>Python</strong><span>Scripting, automazioni, bot</span></div><em>82%</em><i></i>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-shell" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span>Esperienza</p>
+        <h2>Una timeline fatta di community, clienti e piattaforme.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/CreateMeLogo.png" alt="CreateMe">
+          <span>2026 - Oggi</span>
+          <h3>Developer - CreateMe</h3>
+          <p>Lavoro dentro CreateMe, azienda che crea siti web su commissione per clienti che vogliono una presenza digitale curata, moderna e personalizzata.</p>
+          <div><b>Web design</b><b>HTML/CSS</b><b>JavaScript</b><b>Clienti</b></div>
+        </article>
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/devora.png" alt="Devora">
+          <span>2026</span>
+          <h3>Founder - Devora</h3>
+          <p>Realizzazione di siti web e piattaforme digitali per persone e attivita che vogliono una presenza online moderna, chiara e accessibile.</p>
+          <div><b>HTML/CSS</b><b>JavaScript</b><b>SQL</b></div>
+        </article>
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/fotoprofiloLunarRP.png" alt="LunarRP">
+          <span>2026</span>
+          <h3>Developer - LunarRP</h3>
+          <p>Sviluppo script in Lua, gestione database e ottimizzazione performance per un server GTA RP su FiveM.</p>
+          <div><b>Lua</b><b>PHP</b><b>MySQL</b></div>
+        </article>
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/fotoprofiloIMCT.jpg" alt="ImperialCraft">
+          <span>2019 - 2025</span>
+          <h3>Founder - ImperialCraft</h3>
+          <p>Server Minecraft multimodalita con plugin custom in Java, bot Discord, sito integrato e community attiva.</p>
+          <div><b>Java</b><b>Python</b><b>Node.js</b></div>
+        </article>
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/fotoPC_Monitor.png" alt="Web Developer Freelance">
+          <span>2018 - Oggi</span>
+          <h3>Web Developer Freelance</h3>
+          <p>Siti web per attivita commerciali, ristoranti, server di gioco e professionisti: dal sito vetrina alle app piu complesse.</p>
+          <div><b>HTML/CSS</b><b>JavaScript</b><b>PHP</b></div>
+        </article>
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/fotoprofilo.png" alt="Primi passi con Unity">
+          <span>2017 - 2018</span>
+          <h3>Primi passi con Unity</h3>
+          <p>Esperimenti con Unity 3D e C#, utili per imparare logica di programmazione e gestione di esperienze interattive.</p>
+          <div><b>C#</b><b>Unity</b></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-universe section-shell" id="projects">
+      <div class="section-heading section-heading--center reveal">
+        <p class="eyebrow"><span></span>Progetti</p>
+        <h2>Tutti i lavori in un unico spazio.</h2>
+        <p class="section-lead">Una sezione sola, con card da scorrere, immagini in movimento e un archivio compatto dei progetti a cui ho lavorato.</p>
+      </div>
+
+      <div class="project-track" id="projectTrack" aria-label="Progetti principali con scorrimento orizzontale">
+        <article class="project-slide project-slide--highlight">
+          <img src="assets/CreateMeLogo.png" alt="CreateMe">
+          <div>
+            <span>Developer / Siti su commissione</span>
+            <h3>CreateMe</h3>
+            <p>Azienda dove lavoro oggi: realizziamo siti web su commissione per clienti che vogliono un risultato moderno, chiaro e personalizzato.</p>
+          </div>
+        </article>
+        <article class="project-slide">
+          <img src="assets/devora.png" alt="Devora">
+          <div>
+            <span>Founder / Web studio</span>
+            <h3>Devora</h3>
+            <p>Azienda per siti web e piattaforme digitali accessibili, moderne e costruite intorno alle esigenze del cliente.</p>
+            <a href="https://devorastudio.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+          </div>
+        </article>
+        <article class="project-slide">
+          <img src="assets/fotoprofiloIMCT.jpg" alt="ImperialCraft">
+          <div>
+            <span>Founder / Minecraft server</span>
+            <h3>ImperialCraft</h3>
+            <p>Server Minecraft multimodalita, community, plugin custom, bot Discord e sito web integrato.</p>
+            <a href="https://imperialcraft.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+          </div>
+        </article>
+        <article class="project-slide">
+          <img src="assets/fotoprofiloLunarRP.png" alt="LunarRP">
+          <div>
+            <span>Developer / FiveM</span>
+            <h3>LunarRP</h3>
+            <p>Script Lua, gestione database e supporto tecnico per un server GTA RP orientato alle performance.</p>
+            <a href="https://lunarrp.com" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+          </div>
+        </article>
+        <article class="project-slide">
+          <img src="assets/fotoCloniX.png" alt="CloniX">
+          <div>
+            <span>Concept / Social app</span>
+            <h3>CloniX</h3>
+            <p>Concept social per matching basato sugli interessi, utile per progettare flussi, dati e interfacce piu complesse.</p>
+            <a href="https://clonix.io" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+          </div>
+        </article>
+        <article class="project-slide">
+          <img src="assets/fotoNews.png" alt="NewsITA">
+          <div>
+            <span>News / Aggregatore</span>
+            <h3>NewsITA</h3>
+            <p>Aggregatore di notizie italiane con filtri, notifiche e interfaccia responsive per consultazione rapida.</p>
+            <a href="https://newsita.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+          </div>
+        </article>
+        <article class="project-slide">
+          <img src="assets/fotoMindMirror.png" alt="MindMirror">
+          <div>
+            <span>AI / Benessere</span>
+            <h3>MindMirror</h3>
+            <p>Esperienza che simula una seduta psicologica e organizza insight personali in una dashboard dedicata.</p>
+            <a href="https://mindmirror.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="project-rails" aria-label="Immagini progetto in movimento">
+        <div class="image-rail image-rail--left">
+          <img src="assets/CreateMeLogo.png" alt="CreateMe">
+          <img src="assets/fotoIMCTsito.png" alt="Sito ImperialCraft">
+          <img src="assets/fotocrack.png" alt="Spot Carlo Cracco">
+          <img src="assets/fotoducati.ong.png" alt="Spot Ducati">
+          <img src="assets/fotoPC_Monitor.png" alt="PC Monitor">
+          <img src="assets/CreateMeLogo.png" alt="CreateMe duplicate">
+          <img src="assets/fotoIMCTsito.png" alt="Sito ImperialCraft duplicate">
+        </div>
+        <div class="image-rail image-rail--right">
+          <img src="assets/fotolunarbot.png" alt="Bot Discord">
+          <img src="assets/devora.png" alt="Devora">
+          <img src="assets/fotoMindMirror.png" alt="MindMirror">
+          <img src="assets/fotoNews.png" alt="NewsITA">
+          <img src="assets/fotolunarbot.png" alt="Bot Discord duplicate">
+          <img src="assets/devora.png" alt="Devora duplicate">
+        </div>
+      </div>
+
+      <div class="cards-grid project-universe__archive">
+        <article class="mini-project reveal"><img src="assets/fotolunarbot.png" alt="Bot Discord"><h3>Bot Discord</h3><p>Moderazione, comandi custom e automazioni per community.</p><span>JavaScript / Node.js</span></article>
+        <article class="mini-project reveal"><img src="assets/fotoPC_Monitor.png" alt="PC Monitor"><h3>PC Monitor</h3><p>Applicazione desktop per temperature e performance in tempo reale.</p><span>Python / JavaScript</span></article>
+        <article class="mini-project reveal"><img src="assets/fotocrack.png" alt="Spot Carlo Cracco"><h3>Spot Carlo Cracco</h3><p>Pagina promozionale con focus visuale e comunicazione rapida.</p><span>HTML / CSS / JS</span></article>
+        <article class="mini-project reveal"><img src="assets/fotoducati.ong.png" alt="Spot Ducati"><h3>Spot Ducati</h3><p>Esperienza pubblicitaria web con immagine protagonista e CTA.</p><span>HTML / CSS / JS</span></article>
+      </div>
+    </section>
+
+    <section class="method section-shell" id="method">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span>Metodo</p>
+        <h2>Come trasformo un'idea in qualcosa che puoi usare.</h2>
+      </div>
+      <div class="method-grid">
+        <article class="method-step reveal"><span>01</span><h3>Ascolto</h3><p>Capisco obiettivo, pubblico, budget e contenuti reali prima di toccare il codice.</p></article>
+        <article class="method-step reveal"><span>02</span><h3>Struttura</h3><p>Creo architettura, sezioni e priorita, cosi il sito non e solo bello ma chiaro.</p></article>
+        <article class="method-step reveal"><span>03</span><h3>Sviluppo</h3><p>Costruisco interfacce responsive, performanti e facili da mantenere nel tempo.</p></article>
+        <article class="method-step reveal"><span>04</span><h3>Consegna</h3><p>Rifinisco, pubblico e resto disponibile per miglioramenti o supporto.</p></article>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact">
+      <div class="contact__main reveal">
+        <p class="eyebrow"><span></span>Contatti</p>
+        <h2>Hai un progetto in mente?</h2>
+        <p>Scrivimi e lo trasformiamo in una presenza online chiara, veloce e riconoscibile.</p>
+        <a class="button button--primary button--large" href="mailto:enryyyioriox@outlook.it">enryyyioriox@outlook.it <span>&rarr;</span></a>
+      </div>
+      <div class="contact__aside reveal">
+        <a href="mailto:enryyyioriox@outlook.it"><span>Email</span><strong>enryyyioriox@outlook.it</strong></a>
+        <div><span>Location</span><strong>Roma, Italia</strong></div>
+        <div><span>Disponibilita</span><strong>Freelance</strong></div>
+        <nav aria-label="Social">
+          <a href="https://github.com/redmi10enrico-spec" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.instagram.com/enryyy_iorio" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@enrico0077" target="_blank" rel="noopener noreferrer">TikTok</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>&lt;EI/&gt;</span>
+    <p>&copy; 2026 Enrico Iorio - Full-Stack Developer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
