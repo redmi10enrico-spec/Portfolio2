@@ -169,7 +169,7 @@ if (!reduceMotion && finePointer) {
     item.addEventListener("mouseleave", () => cursorRing?.classList.remove("is-active"));
   });
 
-  document.querySelectorAll(".timeline-card, .project-slide, .mini-project, .method-step, .skill-row, .contact__main, .contact__aside, .bio__image, .radar").forEach((item) => {
+  document.querySelectorAll(".timeline-card, .project-slide, .mini-project, .method-step, .skill-row, .contact__main, .contact__aside, .bio__image, .radar, .matchhub__visual").forEach((item) => {
     item.classList.add("is-tiltable");
 
     item.addEventListener("mousemove", (event) => {
