@@ -47,7 +47,6 @@
     <a href="#matchhub">MatchHub</a>
     <a href="#experience">Esperienza</a>
     <a href="#projects">Progetti</a>
-    <a href="#method">Metodo</a>
     <a href="#contact">Contatti</a>
   </div>
 
@@ -96,8 +95,8 @@
 
     <section class="marquee-band" aria-label="Progetti in evidenza">
       <div class="marquee-track">
-        <span>CreateMe</span><span>Devora</span><span>ImperialCraft</span><span>LunarRP</span><span>CloniX</span><span>NewsITA</span><span>MindMirror</span><span>PC Monitor</span><span>Spot Ducati</span><span>Spot Carlo Cracco</span>
-        <span>CreateMe</span><span>Devora</span><span>ImperialCraft</span><span>LunarRP</span><span>CloniX</span><span>NewsITA</span><span>MindMirror</span><span>PC Monitor</span><span>Spot Ducati</span><span>Spot Carlo Cracco</span>
+        <span>CreateMe</span><span>LiteRP</span><span>Devora Studio</span><span>ImperialCraft</span><span>LunarRP</span><span>CloniX</span><span>NewsITA</span><span>MindMirror</span><span>PC Monitor</span><span>Spot Ducati</span><span>Spot Carlo Cracco</span>
+        <span>CreateMe</span><span>LiteRP</span><span>Devora Studio</span><span>ImperialCraft</span><span>LunarRP</span><span>CloniX</span><span>NewsITA</span><span>MindMirror</span><span>PC Monitor</span><span>Spot Ducati</span><span>Spot Carlo Cracco</span>
       </div>
     </section>
 
@@ -106,34 +105,45 @@
         <p class="eyebrow"><span></span>Biografia</p>
         <h2>Dal primo sito ai progetti completi.</h2>
       </div>
-      <div class="bio__grid">
-        <div class="bio__image reveal">
-          <img src="assets/fotoprofilo.png" alt="Enrico Iorio">
-          <div class="bio__badge">
-            <strong>2017</strong>
-            <span>inizio percorso web</span>
+      <div class="bio__layout">
+        <aside class="bio__card reveal" aria-label="Profilo in breve">
+          <div class="bio__identity">
+            <img src="assets/fotoprofilo.png" alt="Logo di Enrico Iorio">
+            <div>
+              <strong>Enrico Iorio</strong>
+              <span>Full-Stack Developer</span>
+            </div>
           </div>
-        </div>
-        <div class="bio__text reveal">
-          <p>
+          <dl class="bio__facts">
+            <div><dt>Base</dt><dd>Roma, Italia</dd></div>
+            <div><dt>Nel web dal</dt><dd>2017</dd></div>
+            <div><dt>Oggi</dt><dd>CreateMe &middot; LiteRP</dd></div>
+            <div><dt>Lavoro</dt><dd>Freelance</dd></div>
+            <div><dt>Fuori dal codice</dt><dd>Bodybuilding, kickboxing</dd></div>
+          </dl>
+        </aside>
+        <div class="bio__content reveal">
+          <p class="bio__lead">
             Sono Enrico Iorio, sviluppatore Full-Stack con sede a Roma. Ho iniziato con
             pagine statiche e sono arrivato a server di gioco, bot, dashboard, siti vetrina,
             landing commerciali e piattaforme su misura.
           </p>
-          <p>
-            Lavoro come freelancer perche credo nel rapporto diretto con il cliente:
-            preferisco costruire soluzioni accessibili, chiare e mantenibili, con supporto
-            anche dopo la consegna.
-          </p>
-          <p>
-            Fuori dal codice pratico bodybuilding e kickboxing. Disciplina, pazienza e
-            costanza non sono slogan: sono il modo in cui porto avanti anche i progetti.
-          </p>
-          <div class="bio__checks">
-            <span>&check; Siti su misura per ogni budget</span>
-            <span>&check; Codice pulito e mantenibile</span>
-            <span>&check; Supporto post-consegna</span>
+          <div class="bio__columns">
+            <p>
+              Lavoro come freelancer perche credo nel rapporto diretto con il cliente:
+              preferisco costruire soluzioni accessibili, chiare e mantenibili, con supporto
+              anche dopo la consegna.
+            </p>
+            <p>
+              Fuori dal codice pratico bodybuilding e kickboxing. Disciplina, pazienza e
+              costanza non sono slogan: sono il modo in cui porto avanti anche i progetti.
+            </p>
           </div>
+          <ul class="bio__values">
+            <li><span>01</span><strong>Su misura</strong><p>Siti costruiti per ogni budget, non template riciclati.</p></li>
+            <li><span>02</span><strong>Codice pulito</strong><p>Struttura chiara e facile da mantenere nel tempo.</p></li>
+            <li><span>03</span><strong>Supporto</strong><p>Resto disponibile anche dopo la consegna.</p></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -142,39 +152,46 @@
       <div class="section-heading reveal">
         <p class="eyebrow"><span></span>Competenze</p>
         <h2>Stack pratico, non solo parole.</h2>
+        <p class="section-lead">Le tecnologie che uso, divise per area, con quello che ci faccio davvero.</p>
       </div>
-      <div class="skills__layout">
-        <div class="radar reveal" aria-label="Mappa competenze">
-          <div class="radar__ring ring-a"></div>
-          <div class="radar__ring ring-b"></div>
-          <div class="radar__ring ring-c"></div>
-          <span style="--x:74%;--y:22%">HTML</span>
-          <span style="--x:84%;--y:58%">CSS</span>
-          <span style="--x:50%;--y:12%">JS</span>
-          <span style="--x:18%;--y:42%">Java</span>
-          <span style="--x:30%;--y:78%">SQL</span>
-          <span style="--x:66%;--y:82%">Python</span>
-          <strong>Full<br>Stack</strong>
+      <div class="stack reveal">
+        <div class="stack__group">
+          <div class="stack__area">
+            <span>01</span>
+            <h3>Frontend</h3>
+            <p>Interfacce chiare, veloci e responsive.</p>
+          </div>
+          <ul class="stack__cells">
+            <li><strong>HTML &amp; CSS</strong><p>Layout responsive, semantica, SEO e animazioni.</p></li>
+            <li><strong>JavaScript</strong><p>Interazioni, logica lato client e dati asincroni.</p></li>
+          </ul>
         </div>
-        <div class="skill-list reveal">
-          <article class="skill-row" style="--level:95%">
-            <div><strong>HTML5</strong><span>Semantica, accessibilita, SEO</span></div><em>95%</em><i></i>
-          </article>
-          <article class="skill-row" style="--level:92%">
-            <div><strong>CSS3</strong><span>Grid, responsive, animazioni</span></div><em>92%</em><i></i>
-          </article>
-          <article class="skill-row" style="--level:90%">
-            <div><strong>JavaScript</strong><span>ES6+, DOM, async, interazioni</span></div><em>90%</em><i></i>
-          </article>
-          <article class="skill-row" style="--level:85%">
-            <div><strong>Java</strong><span>Plugin Minecraft, logica backend</span></div><em>85%</em><i></i>
-          </article>
-          <article class="skill-row" style="--level:87%">
-            <div><strong>SQL</strong><span>MySQL e database relazionali</span></div><em>87%</em><i></i>
-          </article>
-          <article class="skill-row" style="--level:82%">
-            <div><strong>Python</strong><span>Scripting, automazioni, bot</span></div><em>82%</em><i></i>
-          </article>
+
+        <div class="stack__group">
+          <div class="stack__area">
+            <span>02</span>
+            <h3>Backend e dati</h3>
+            <p>Logica, database e automazioni.</p>
+          </div>
+          <ul class="stack__cells">
+            <li><strong>SQL / MySQL</strong><p>Database relazionali, query e gestione dei dati.</p></li>
+            <li><strong>PHP</strong><p>Backend per siti e pannelli web.</p></li>
+            <li><strong>Python</strong><p>Script, automazioni e bot.</p></li>
+          </ul>
+        </div>
+
+        <div class="stack__group">
+          <div class="stack__area">
+            <span>03</span>
+            <h3>Gaming e community</h3>
+            <p>Server di gioco, plugin e bot.</p>
+          </div>
+          <ul class="stack__cells">
+            <li><strong>Lua</strong><p>Script per server GTA RP su FiveM.</p></li>
+            <li><strong>Java</strong><p>Plugin custom per server Minecraft.</p></li>
+            <li><strong>Node.js</strong><p>Bot Discord con comandi, moderazione e automazioni.</p></li>
+            <li><strong>C# / Unity</strong><p>I primi giochi, dove ho imparato la logica di programmazione.</p></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -228,22 +245,29 @@
       </div>
       <div class="timeline">
         <article class="timeline-card timeline-card--with-logo reveal">
-          <img class="timeline-logo" src="assets/devora.png" alt="Devora">
-          <span>2026 - Oggi</span>
-          <h3>Founder - Devora</h3>
-          <p>Realizzazione di siti web e piattaforme digitali per persone e attivita che vogliono una presenza online moderna, chiara e accessibile.</p>
-          <div><b>HTML/CSS</b><b>JavaScript</b><b>SQL</b></div>
-        </article>
-        <article class="timeline-card timeline-card--with-logo reveal">
           <img class="timeline-logo" src="assets/CreateMeLogo.png" alt="CreateMe">
-          <span>2026</span>
+          <span>2026 - Oggi</span>
           <h3>Developer - CreateMe</h3>
           <p>Lavoro dentro CreateMe, azienda che crea siti web su commissione per clienti che vogliono una presenza digitale curata, moderna e personalizzata.</p>
           <div><b>Web design</b><b>HTML/CSS</b><b>JavaScript</b><b>Clienti</b></div>
         </article>
         <article class="timeline-card timeline-card--with-logo reveal">
-          <img class="timeline-logo" src="assets/fotoprofiloLunarRP.png" alt="LunarRP">
+          <img class="timeline-logo" src="assets/logo.png" alt="LiteRP">
+          <span>2026 - Oggi</span>
+          <h3>Developer - LiteRP</h3>
+          <p>Progetto che sto sviluppando oggi: un server GTA RP su FiveM costruito da zero, tra script Lua, database e sistemi di gioco pensati per la community.</p>
+          <div><b>Lua</b><b>MySQL</b><b>FiveM</b></div>
+        </article>
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/devora.png" alt="Devora Studio">
           <span>2026</span>
+          <h3>Founder - Devora Studio</h3>
+          <p>Realizzazione di siti web e piattaforme digitali per persone e attivita che vogliono una presenza online moderna, chiara e accessibile.</p>
+          <div><b>HTML/CSS</b><b>JavaScript</b><b>SQL</b></div>
+        </article>
+        <article class="timeline-card timeline-card--with-logo reveal">
+          <img class="timeline-logo" src="assets/fotoprofiloLunarRP.png" alt="LunarRP">
+          <span>2025</span>
           <h3>Developer - LunarRP</h3>
           <p>Sviluppo script in Lua, gestione database e ottimizzazione performance per un server GTA RP su FiveM.</p>
           <div><b>Lua</b><b>PHP</b><b>MySQL</b></div>
@@ -272,116 +296,184 @@
       </div>
     </section>
 
-    <section class="project-universe section-shell" id="projects">
-      <div class="section-heading section-heading--center reveal">
-        <p class="eyebrow"><span></span>Progetti</p>
-        <h2>Tutti i lavori in un unico spazio.</h2>
-        <p class="section-lead">Una sezione sola, con card da scorrere, immagini in movimento e un archivio compatto dei progetti a cui ho lavorato.</p>
-      </div>
-
-      <div class="project-track" id="projectTrack" aria-label="Progetti principali con scorrimento orizzontale">
-        <article class="project-slide project-slide--highlight">
-          <img src="assets/CreateMeLogo.png" alt="CreateMe">
-          <div>
-            <span>Developer / Siti su commissione</span>
-            <h3>CreateMe</h3>
-            <p>Azienda dove lavoro oggi: realizziamo siti web su commissione per clienti che vogliono un risultato moderno, chiaro e personalizzato.</p>
-          </div>
-        </article>
-        <article class="project-slide">
-          <img src="assets/devora.png" alt="Devora">
-          <div>
-            <span>Founder / Web studio</span>
-            <h3>Devora</h3>
-            <p>Azienda per siti web e piattaforme digitali accessibili, moderne e costruite intorno alle esigenze del cliente.</p>
-            <a href="https://devorastudio.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
-          </div>
-        </article>
-        <article class="project-slide">
-          <img src="assets/fotoprofiloIMCT.jpg" alt="ImperialCraft">
-          <div>
-            <span>Founder / Minecraft server</span>
-            <h3>ImperialCraft</h3>
-            <p>Server Minecraft multimodalita, community, plugin custom, bot Discord e sito web integrato.</p>
-            <a href="https://imperialcraft.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
-          </div>
-        </article>
-        <article class="project-slide">
-          <img src="assets/fotoprofiloLunarRP.png" alt="LunarRP">
-          <div>
-            <span>Developer / FiveM</span>
-            <h3>LunarRP</h3>
-            <p>Script Lua, gestione database e supporto tecnico per un server GTA RP orientato alle performance.</p>
-            <a href="https://lunarrp.com" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
-          </div>
-        </article>
-        <article class="project-slide">
-          <img src="assets/fotoCloniX.png" alt="CloniX">
-          <div>
-            <span>Concept / Social app</span>
-            <h3>CloniX</h3>
-            <p>Concept social per matching basato sugli interessi, utile per progettare flussi, dati e interfacce piu complesse.</p>
-            <a href="https://clonix.io" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
-          </div>
-        </article>
-        <article class="project-slide">
-          <img src="assets/fotoNews.png" alt="NewsITA">
-          <div>
-            <span>News / Aggregatore</span>
-            <h3>NewsITA</h3>
-            <p>Aggregatore di notizie italiane con filtri, notifiche e interfaccia responsive per consultazione rapida.</p>
-            <a href="https://newsita.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
-          </div>
-        </article>
-        <article class="project-slide">
-          <img src="assets/fotoMindMirror.png" alt="MindMirror">
-          <div>
-            <span>AI / Benessere</span>
-            <h3>MindMirror</h3>
-            <p>Esperienza che simula una seduta psicologica e organizza insight personali in una dashboard dedicata.</p>
-            <a href="https://mindmirror.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="project-rails" aria-label="Immagini progetto in movimento">
-        <div class="image-rail image-rail--left">
-          <img src="assets/CreateMeLogo.png" alt="CreateMe">
-          <img src="assets/fotoIMCTsito.png" alt="Sito ImperialCraft">
-          <img src="assets/fotocrack.png" alt="Spot Carlo Cracco">
-          <img src="assets/fotoducati.ong.png" alt="Spot Ducati">
-          <img src="assets/fotoPC_Monitor.png" alt="PC Monitor">
-          <img src="assets/CreateMeLogo.png" alt="CreateMe duplicate">
-          <img src="assets/fotoIMCTsito.png" alt="Sito ImperialCraft duplicate">
-        </div>
-        <div class="image-rail image-rail--right">
-          <img src="assets/fotolunarbot.png" alt="Bot Discord">
-          <img src="assets/devora.png" alt="Devora">
-          <img src="assets/fotoMindMirror.png" alt="MindMirror">
-          <img src="assets/fotoNews.png" alt="NewsITA">
-          <img src="assets/fotolunarbot.png" alt="Bot Discord duplicate">
-          <img src="assets/devora.png" alt="Devora duplicate">
-        </div>
-      </div>
-
-      <div class="cards-grid project-universe__archive">
-        <article class="mini-project reveal"><img src="assets/fotolunarbot.png" alt="Bot Discord"><h3>Bot Discord</h3><p>Moderazione, comandi custom e automazioni per community.</p><span>JavaScript / Node.js</span></article>
-        <article class="mini-project reveal"><img src="assets/fotoPC_Monitor.png" alt="PC Monitor"><h3>PC Monitor</h3><p>Applicazione desktop per temperature e performance in tempo reale.</p><span>Python / JavaScript</span></article>
-        <article class="mini-project reveal"><img src="assets/fotocrack.png" alt="Spot Carlo Cracco"><h3>Spot Carlo Cracco</h3><p>Pagina promozionale con focus visuale e comunicazione rapida.</p><span>HTML / CSS / JS</span></article>
-        <article class="mini-project reveal"><img src="assets/fotoducati.ong.png" alt="Spot Ducati"><h3>Spot Ducati</h3><p>Esperienza pubblicitaria web con immagine protagonista e CTA.</p><span>HTML / CSS / JS</span></article>
-      </div>
-    </section>
-
-    <section class="method section-shell" id="method">
+    <section class="projects section-shell" id="projects">
       <div class="section-heading reveal">
-        <p class="eyebrow"><span></span>Metodo</p>
-        <h2>Come trasformo un'idea in qualcosa che puoi usare.</h2>
+        <p class="eyebrow"><span></span>Progetti</p>
+        <h2>Cosa sto costruendo e cosa ho costruito.</h2>
+        <p class="section-lead">Divisi in tre blocchi: i progetti su cui lavoro oggi, quelli principali gia realizzati e un archivio di lavori piu piccoli.</p>
       </div>
-      <div class="method-grid">
-        <article class="method-step reveal"><span>01</span><h3>Ascolto</h3><p>Capisco obiettivo, pubblico, budget e contenuti reali prima di toccare il codice.</p></article>
-        <article class="method-step reveal"><span>02</span><h3>Struttura</h3><p>Creo architettura, sezioni e priorita, cosi il sito non e solo bello ma chiaro.</p></article>
-        <article class="method-step reveal"><span>03</span><h3>Sviluppo</h3><p>Costruisco interfacce responsive, performanti e facili da mantenere nel tempo.</p></article>
-        <article class="method-step reveal"><span>04</span><h3>Consegna</h3><p>Rifinisco, pubblico e resto disponibile per miglioramenti o supporto.</p></article>
+
+      <div class="project-group">
+        <header class="project-group__head reveal">
+          <span>01</span>
+          <h3>Adesso</h3>
+          <p>Progetti attivi</p>
+        </header>
+        <div class="project-grid project-grid--featured">
+          <article class="project-card project-card--featured reveal">
+            <div class="project-card__media project-card__media--logo">
+              <img src="assets/CreateMeLogo.png" alt="Logo CreateMe" loading="lazy">
+              <em class="project-card__badge">Oggi</em>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">Developer &middot; Siti su commissione</span>
+              <h3>CreateMe</h3>
+              <p>Azienda dove lavoro oggi: realizziamo siti web su commissione per clienti che vogliono un risultato moderno, chiaro e personalizzato.</p>
+              <div class="project-card__footer">
+                <ul class="project-card__stack"><li>Web design</li><li>HTML/CSS</li><li>JavaScript</li></ul>
+                <a class="project-card__link" href="https://createme.studio" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card project-card--featured reveal">
+            <div class="project-card__media project-card__media--logo">
+              <img src="assets/logo.png" alt="Logo LiteRP" loading="lazy">
+              <em class="project-card__badge">Oggi</em>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">Developer &middot; FiveM</span>
+              <h3>LiteRP</h3>
+              <p>Il progetto che sto sviluppando ora: un server GTA RP costruito da zero, con script Lua, database e sistemi di gioco pensati per la community.</p>
+              <div class="project-card__footer">
+                <ul class="project-card__stack"><li>Lua</li><li>MySQL</li><li>FiveM</li></ul>
+                <a class="project-card__link" href="https://literp.it" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="project-group">
+        <header class="project-group__head reveal">
+          <span>02</span>
+          <h3>Progetti principali</h3>
+          <p>6 progetti</p>
+        </header>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-card__media project-card__media--logo">
+              <img src="assets/devora.png" alt="Logo Devora Studio" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">Founder &middot; Web studio</span>
+              <h3>Devora Studio</h3>
+              <p>Studio per siti web e piattaforme digitali accessibili, moderne e costruite intorno alle esigenze del cliente.</p>
+              <div class="project-card__footer">
+                <ul class="project-card__stack"><li>HTML/CSS</li><li>JavaScript</li><li>SQL</li></ul>
+                <a class="project-card__link" href="https://devorastudio.it" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <img src="assets/fotoIMCTsito.png" alt="Sito di ImperialCraft" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">Founder &middot; Server Minecraft</span>
+              <h3>ImperialCraft</h3>
+              <p>Server Minecraft multimodalita con community attiva, plugin custom, bot Discord e sito web integrato.</p>
+              <div class="project-card__footer">
+                <ul class="project-card__stack"><li>Java</li><li>Python</li><li>Node.js</li></ul>
+                <a class="project-card__link" href="https://imperialcraft.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__media project-card__media--logo">
+              <img src="assets/fotoprofiloLunarRP.png" alt="Logo LunarRP" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">Developer &middot; FiveM</span>
+              <h3>LunarRP</h3>
+              <p>Script Lua, gestione database e supporto tecnico per un server GTA RP orientato alle performance.</p>
+              <div class="project-card__footer">
+                <ul class="project-card__stack"><li>Lua</li><li>PHP</li><li>MySQL</li></ul>
+                <a class="project-card__link" href="https://lunarrp.com" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <img src="assets/fotoCloniX.png" alt="Interfaccia di CloniX" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">Concept &middot; Social app</span>
+              <h3>CloniX</h3>
+              <p>Concept social per matching basato sugli interessi, utile per progettare flussi, dati e interfacce piu complesse.</p>
+              <div class="project-card__footer">
+                <a class="project-card__link" href="https://clonix.io" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <img src="assets/fotoNews.png" alt="Interfaccia di NewsITA" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">News &middot; Aggregatore</span>
+              <h3>NewsITA</h3>
+              <p>Aggregatore di notizie italiane con filtri, notifiche e interfaccia responsive per consultazione rapida.</p>
+              <div class="project-card__footer">
+                <a class="project-card__link" href="https://newsita.vercel.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <img src="assets/fotoMindMirror.png" alt="Interfaccia di MindMirror" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__meta">AI &middot; Benessere</span>
+              <h3>MindMirror</h3>
+              <p>Esperienza che simula una seduta psicologica e organizza insight personali in una dashboard dedicata.</p>
+              <div class="project-card__footer">
+                <a class="project-card__link" href="https://mindmirror.app" target="_blank" rel="noopener noreferrer">Visita sito &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="project-group">
+        <header class="project-group__head reveal">
+          <span>03</span>
+          <h3>Altri lavori</h3>
+          <p>Archivio</p>
+        </header>
+        <div class="project-grid project-grid--compact">
+          <article class="project-card project-card--compact reveal">
+            <div class="project-card__media"><img src="assets/fotolunarbot.png" alt="Bot Discord" loading="lazy"></div>
+            <div class="project-card__body">
+              <h3>Bot Discord</h3>
+              <p>Moderazione, comandi custom e automazioni per community.</p>
+              <ul class="project-card__stack"><li>JavaScript</li><li>Node.js</li></ul>
+            </div>
+          </article>
+          <article class="project-card project-card--compact reveal">
+            <div class="project-card__media"><img src="assets/fotoPC_Monitor.png" alt="PC Monitor" loading="lazy"></div>
+            <div class="project-card__body">
+              <h3>PC Monitor</h3>
+              <p>App desktop per temperature e performance in tempo reale.</p>
+              <ul class="project-card__stack"><li>Python</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+          <article class="project-card project-card--compact reveal">
+            <div class="project-card__media"><img src="assets/fotocrack.png" alt="Spot Carlo Cracco" loading="lazy"></div>
+            <div class="project-card__body">
+              <h3>Spot Carlo Cracco</h3>
+              <p>Pagina promozionale con focus visuale e comunicazione rapida.</p>
+              <ul class="project-card__stack"><li>HTML/CSS</li><li>JS</li></ul>
+            </div>
+          </article>
+          <article class="project-card project-card--compact reveal">
+            <div class="project-card__media"><img src="assets/fotoducati.ong.png" alt="Spot Ducati" loading="lazy"></div>
+            <div class="project-card__body">
+              <h3>Spot Ducati</h3>
+              <p>Esperienza pubblicitaria web con immagine protagonista e CTA.</p>
+              <ul class="project-card__stack"><li>HTML/CSS</li><li>JS</li></ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 

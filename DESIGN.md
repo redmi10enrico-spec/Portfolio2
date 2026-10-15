@@ -22,9 +22,9 @@
 - Key contexts of use: mobile-first browsing from social links, desktop review by potential clients, quick portfolio sharing.
 
 ## Information architecture
-- Primary navigation: Home, Bio, Competenze, Esperienza, Progetti, Metodo, Contatti.
+- Primary navigation: Home, Bio, Competenze, MatchHub, Esperienza, Progetti, Contatti.
 - Core routes/screens: static `index.html` sections with anchored navigation.
-- Content hierarchy: hero identity and CTA first, biography and skill proof, timeline with CreateMe, unified project section, method/process, contact.
+- Content hierarchy: hero identity and CTA first, biography (profile card + text), grouped skills, MatchHub, timeline, grouped project section, contact.
 
 ## Design principles
 - Principle 1: every large visual element should be tied to Enrico or a real project asset.
@@ -34,14 +34,14 @@
 ## Visual language
 - Color: black base, white text, violet lines/buttons/details, restrained white glow accents.
 - Typography: geometric display headings, readable sans-serif body, tight but not compressed hierarchy.
-- Spacing/layout rhythm: generous section spacing, compact project cards, centered project headings, mouse-wheel horizontal carousel, moving rails to break normal vertical scrolling.
+- Spacing/layout rhythm: generous section spacing, projects grouped in three labelled blocks (Adesso / Progetti principali / Altri lavori) on a plain grid.
 - Shape/radius/elevation: crisp 8px radius max, thin borders, layered shadows with violet tint.
-- Motion: loader, reveal-on-scroll, marquee rails, inertial mouse-wheel project carousel, constellation canvas, scanline drift, cursor trail, magnetic CTAs, card tilt/spotlight, timeline signal pulse, subtle parallax, reduced-motion fallback.
+- Motion: loader, reveal-on-scroll, marquee band, constellation canvas, scanline drift, cursor trail, magnetic CTAs, card tilt/spotlight, timeline signal pulse, subtle parallax, reduced-motion fallback.
 - Imagery/iconography: use local project images and profile photo; icons are simple text/symbol treatments where no icon library exists.
 
 ## Components
 - Existing components to reuse: none; the repository was empty except assets.
-- New/changed components: fixed nav, hero portrait stage, animated stats, marquee strips, skill bars, timeline cards with logos and pulse, compact inertial project carousel, moving image rails, compact project archive, magnetic contact panel.
+- New/changed components: fixed nav, hero portrait stage, animated stats, marquee strips, skill bars, timeline cards with logos and pulse, grouped project grid with featured, standard and compact project cards plus an "Oggi" badge, magnetic contact panel.
 - Variants and states: active nav state, hover/focus states, reduced-motion behavior, mobile menu.
 - Token/component ownership: tokens live in `styles.css`; behavior lives in `script.js`.
 
@@ -54,8 +54,8 @@
 
 ## Responsive behavior
 - Supported breakpoints/devices: mobile portrait, tablets, desktop, wide desktop.
-- Layout adaptations: hero/timeline/project areas collapse to one column; horizontal project track supports mouse-wheel scrolling and native touch scrolling.
-- Touch/hover differences: drag and wheel enhancement where pointer is available; touch uses native horizontal scroll.
+- Layout adaptations: hero/timeline/project areas collapse to one column; project grids go 3/4 columns -> 2 -> 1.
+- Touch/hover differences: tilt/spotlight effects only with a fine pointer.
 
 ## Interaction states
 - Loading: short animated loader with progress line.

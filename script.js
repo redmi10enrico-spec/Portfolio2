@@ -3,7 +3,6 @@ const progress = document.getElementById("scrollProgress");
 const header = document.getElementById("siteHeader");
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
-const projectTrack = document.getElementById("projectTrack");
 const cursorDot = document.getElementById("cursorDot");
 const cursorRing = document.getElementById("cursorRing");
 const constellationCanvas = document.getElementById("constellationCanvas");
@@ -48,15 +47,12 @@ const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("is-visible");
-      if (entry.target.classList.contains("skill-row")) {
-        entry.target.classList.add("is-visible");
-      }
       revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.16 });
 
-document.querySelectorAll(".reveal, .skill-row").forEach((item) => revealObserver.observe(item));
+document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
 
 const sections = [...document.querySelectorAll("main section[id]")];
 const navLinks = [...document.querySelectorAll(".nav a")];
@@ -88,47 +84,6 @@ function updateScrollEffects() {
 window.addEventListener("scroll", updateScrollEffects, { passive: true });
 window.addEventListener("resize", updateScrollEffects);
 updateScrollEffects();
-
-let projectVelocity = 0;
-let projectWheelFrame = 0;
-
-function animateProjectMomentum() {
-  if (!projectTrack) return;
-  const maxScroll = projectTrack.scrollWidth - projectTrack.clientWidth;
-  const next = clamp(projectTrack.scrollLeft + projectVelocity, 0, maxScroll);
-  const hitEdge = next === 0 || next === maxScroll;
-
-  projectTrack.scrollLeft = next;
-  projectVelocity *= hitEdge ? 0 : 0.84;
-
-  if (Math.abs(projectVelocity) > 0.35) {
-    projectWheelFrame = requestAnimationFrame(animateProjectMomentum);
-  } else {
-    projectVelocity = 0;
-    projectWheelFrame = 0;
-  }
-}
-
-projectTrack?.addEventListener("wheel", (event) => {
-  const maxScroll = projectTrack.scrollWidth - projectTrack.clientWidth;
-  if (maxScroll <= 0) return;
-
-  const delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
-  const canMoveLeft = delta < 0 && projectTrack.scrollLeft > 0;
-  const canMoveRight = delta > 0 && projectTrack.scrollLeft < maxScroll - 1;
-
-  if (canMoveLeft || canMoveRight) {
-    event.preventDefault();
-    if (reduceMotion) {
-      projectTrack.scrollLeft = clamp(projectTrack.scrollLeft + delta, 0, maxScroll);
-      return;
-    }
-
-    projectVelocity += delta * 0.36;
-    projectVelocity = clamp(projectVelocity, -46, 46);
-    if (!projectWheelFrame) projectWheelFrame = requestAnimationFrame(animateProjectMomentum);
-  }
-}, { passive: false });
 
 if (!reduceMotion && finePointer) {
   let mouseX = 0;
@@ -169,7 +124,7 @@ if (!reduceMotion && finePointer) {
     item.addEventListener("mouseleave", () => cursorRing?.classList.remove("is-active"));
   });
 
-  document.querySelectorAll(".timeline-card, .project-slide, .mini-project, .method-step, .skill-row, .contact__main, .contact__aside, .bio__image, .radar, .matchhub__visual").forEach((item) => {
+  document.querySelectorAll(".timeline-card, .project-card, .bio__card, .contact__main, .contact__aside, .matchhub__visual").forEach((item) => {
     item.classList.add("is-tiltable");
 
     item.addEventListener("mousemove", (event) => {
@@ -190,7 +145,7 @@ if (!reduceMotion && finePointer) {
     });
   });
 
-  document.querySelectorAll(".button, .header-cta, .project-slide a").forEach((item) => {
+  document.querySelectorAll(".button, .header-cta").forEach((item) => {
     item.addEventListener("mousemove", (event) => {
       const rect = item.getBoundingClientRect();
       const x = ((event.clientX - rect.left) / rect.width - 0.5) * 12;
@@ -314,28 +269,3 @@ function initConstellation() {
 }
 
 initConstellation();
-
-let isDragging = false;
-let startX = 0;
-let scrollLeft = 0;
-
-projectTrack?.addEventListener("pointerdown", (event) => {
-  if (window.innerWidth > 820) return;
-  isDragging = true;
-  startX = event.clientX;
-  scrollLeft = projectTrack.scrollLeft;
-  projectTrack.setPointerCapture(event.pointerId);
-});
-
-projectTrack?.addEventListener("pointermove", (event) => {
-  if (!isDragging) return;
-  projectTrack.scrollLeft = scrollLeft - (event.clientX - startX);
-});
-
-projectTrack?.addEventListener("pointerup", () => {
-  isDragging = false;
-});
-
-projectTrack?.addEventListener("pointercancel", () => {
-  isDragging = false;
-});
